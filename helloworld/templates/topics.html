@@ -42,8 +42,9 @@
               {% endfor %}
               {% if topic.has_many_pages %}
               ... <a href="{{ topic_url }}?page={{ topic.get_page_count }}">Last Page</a>
-              {% endif &}
+              {% endif %}
             </small>
+          </td>
           <td class="align-middle">{{ topic.starter.username }}</td>
           <td class="align-middle">{{ topic.replies }}</td>
           <td class="align-middle">{{ topic.views }}</td>
