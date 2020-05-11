@@ -48,7 +48,7 @@ class PostListView(ListView):
             self.topic.views += 1
             self.topic.save()
             self.request.session[session_key] = True
-            
+
         kwargs['topic'] = self.topic
         return super().get_context_data(**kwargs)
 
