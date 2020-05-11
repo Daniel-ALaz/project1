@@ -12,6 +12,8 @@ from .models import Post
 from django.views.generic import ListView
 
 
+
+
 class BoardListView(ListView):
     model = Board
     context_object_name = 'boards'
