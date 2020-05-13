@@ -5,7 +5,6 @@ from django.shortcuts import get_object_or_404, redirect, render
 from .forms import NewTopicForm, PostForm
 from .models import Board, Post, Topic
 from django.views.generic import UpdateView
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.utils import timezone
 from django.utils.decorators import method_decorator
 from .models import Post
@@ -111,6 +110,7 @@ def reply_topic(request, pk, topic_pk):
     else:
         form = PostForm()
     return render(request, 'reply_topic.html', {'topic': topic, 'form': form})
+
 
 @method_decorator(login_required, name='dispatch')
 class PostUpdateView(UpdateView):
