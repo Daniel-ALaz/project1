@@ -35,7 +35,7 @@ class Topic(models.Model):
         return math.ceil(pages)
 
     def has_many_pages(self, count=None):
-        if count in None:
+        if count in [None, ]:
             count = self.get_page_count()
         return count > 6
 
